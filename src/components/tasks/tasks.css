@@ -1,0 +1,60 @@
+section.tasks {
+    width: fit-content;
+    padding: var(--box-padding);
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    background-color: var(--color-primary);
+    border-radius: var(--component-radius);
+}
+
+.tasks__list {
+    height: 8rem;
+    width: 30rem;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+    font-size: 1.4rem;
+    scrollbar-color: white var(--color-bg);
+}
+
+.tasks__list::-webkit-scrollbar{
+    background-color: var(--color-bg);
+    width: 0.6rem;
+    display: none;
+}
+
+.tasks__list:hover::-webkit-scrollbar{
+    display: block;
+}
+
+.tasks__list::-webkit-scrollbar-thumb{
+    background-color: var(--color-secondary);
+    border-radius: 1rem;
+}
+
+.tasks__input {
+    list-style-type: circle;
+    background-color: var(--color-primary);
+}
+
+.tasks__form {
+    width: fit-content;
+}
+
+.tasks__input {
+    padding: 1rem;
+    font-family: monospace;
+    font-size: 1.4rem;
+    color: white;
+}
+
+.tasks__btn {
+    background-color: var(--color-secondary);
+    color: black;
+    border-radius: 0.4rem;
+    padding: 0.25rem;
+}
+
+.add-icon{
+    font-size: 1.5rem;
+}

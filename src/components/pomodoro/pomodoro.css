@@ -1,0 +1,39 @@
+section.Pomodoro{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: fit-content;
+    gap: 2rem;
+    background-color: var(--color-primary);
+    border-radius: var(--component-radius);
+    padding: var(--box-padding);
+}
+
+.Pomodoro__ModeSelect{
+    display: flex;
+    flex-direction: column;
+}
+
+.Pomodoro__Icon--Work{
+    color: white;
+    background-color: transparent;
+    font-size: 2rem;
+}
+
+.Pomodoro__Icon--Break{
+    color: white;
+    background-color: transparent;
+    font-size: 2rem;
+}
+
+.Pomodoro__Time{
+    font-size: 3rem;
+}
+
+.Pomodoro__StartToggle{
+    font-size: 2rem;
+    padding: 0.5rem;
+    border-radius: 1rem;
+    background-color: var(--color-secondary);
+    color: black;
+}

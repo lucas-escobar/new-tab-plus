@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+}
+
+:root {
+    font-size: 62.5%; /* makes rem value 10px */
+    --color-white: rgb(230, 230, 230);
+    --color-bg: #254e70;
+    --color-primary: #306c92;
+    --color-secondary: #f561fd;
+
+    --component-radius: 1rem;
+    --box-padding: 1.8rem;
+}
+
+#root{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 66%;
+    height: 75%;
+    gap: 3rem;
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    color: white;
+    background-color: var(--color-bg);
+    font-family: 'Open Sans', sans-serif;
+    /*background-image: url('./assets/bg-1.png');*/
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+section{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 
+        0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+::placeholder{
+    color: rgba(255,255,255,0.8);
+}
+
+.row{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: nowrap;
+    gap: 3rem;
+}

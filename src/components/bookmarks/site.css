@@ -1,0 +1,8 @@
+.bookmark__icon{
+    font-size: 4rem;
+    color: white;
+}
+
+.bookmark__icon:hover{
+    color: var(--color-secondary);
+}

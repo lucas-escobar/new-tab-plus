@@ -1,0 +1,13 @@
+section.image{
+    display: flex;
+    justify-content: center;
+    width: fit-content;
+    padding: 0.4rem;
+    background-color: var(--color-primary);
+    border-radius: var(--component-radius);
+}
+
+img{
+    border-radius: var(--component-radius);
+    width: 40rem;
+}
