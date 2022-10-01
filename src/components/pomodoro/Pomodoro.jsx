@@ -9,7 +9,7 @@ export default function Pomodoro(props) {
     const [workBreakSplit, setWorkBreakSplit] = useState(props.workBreak);
     const [secondsRemaining, setSecondsRemaining] = useState(props.workBreak.work);
 
-    // audio from https://www.zapsplat.com/?s=gong&post_type=music&sound-effect-category-id
+    // Audio from https://www.zapsplat.com/?s=gong&post_type=music&sound-effect-category-id
     const audio = useMemo (() => new Audio('../../assets/gong-1.mp3'), []);
     const timer = useRef();
 
