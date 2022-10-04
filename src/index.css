@@ -8,14 +8,15 @@
 }
 
 :root {
-    font-size: 62.5%; /* makes rem value 10px */
-    --color-white: rgb(230, 230, 230);
+    font-size: 62.5%; /* makes 1 rem value 10px */
+    --color-on-primary: white;
+    --color-on-secondary: black;
     --color-bg: #254e70;
     --color-primary: #306c92;
     --color-secondary: #f561fd;
 
     --component-radius: 1rem;
-    --box-padding: 1.8rem;
+    --box-padding: 1.8rem 1.8rem;
 }
 
 #root{
@@ -28,8 +29,8 @@
 }
 
 body{
-    height: 100vh;
     display: flex;
+    height: 100vh; 
     width: 100%;
     justify-content: center;
     align-items: center;
@@ -43,19 +44,24 @@ body{
     background-repeat: no-repeat;
 }
 
-section{
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 
-        0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
-
-::placeholder{
-    color: rgba(255,255,255,0.8);
-}
-
-.row{
+.Row{
     display: flex;
     flex-direction: row;
     justify-content: center;
     flex-wrap: nowrap;
     gap: 3rem;
+}
+
+section{
+    display: flex;
+    width: fit-content;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 
+        0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background-color: var(--color-primary);
+    border-radius: var(--component-radius);
+    padding: var(--box-padding);
+}
+
+::placeholder{
+    color: rgba(255,255,255,0.7);
 }

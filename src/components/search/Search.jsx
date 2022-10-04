@@ -4,15 +4,12 @@ import DropdownButton from 'react-bootstrap/DropdownButton';
 import { AiFillGoogleCircle, AiOutlineSearch } from 'react-icons/ai';
 import { FaYandexInternational } from 'react-icons/fa';
 import { SiDuckduckgo } from 'react-icons/si';
-import { IconContext } from 'react-icons';
 import './search.css';
 
-//const iconColor = getComputedStyle(document.body).style.getPropertyValue('--color-secondary');
-
 const searchEngines = [
-    {siteName: "duckduckgo", icon: <SiDuckduckgo className="icon" />},
-    {siteName: "google", icon:  <AiFillGoogleCircle className="icon" />},
-    {siteName: "yandex", icon: <FaYandexInternational className="icon" />}
+    {siteName: "duckduckgo", icon: <SiDuckduckgo className="Icon" />},
+    {siteName: "google", icon: <AiFillGoogleCircle className="Icon" />},
+    {siteName: "yandex", icon: <FaYandexInternational className="Icon" />}
 ];
 
 export default function Search(){
@@ -25,27 +22,27 @@ export default function Search(){
     }
 
     return(
-        <section className="search">
-            <DropdownButton className="search__dropdown"
+        <section className="Search">
+            <DropdownButton className="Search__Dropdown"
                 variant="custom"
-                style={{ color: '#00B1E1'}}
+                style={{color: '#00B1E1'}}
                 title={engine.icon}
             >
                 {searchEngines.map((engine) => 
-                    <Dropdown.Item className="search__engineLogo" key={engine.siteName} 
+                    <Dropdown.Item className="Search__EngineLogo" key={engine.siteName} 
                     onClick={handleClick}>
                         {engine.icon}
                     </Dropdown.Item>
                 )}
             </DropdownButton>
             <form 
-                className="search__bar" 
+                className="Search__Bar" 
                 action={query}
                 method="get"
                 target="_blank"
             >
                 <input 
-                    className="search__input" 
+                    className="Search__Input" 
                     type="text" 
                     placeholder="Search"
                     onChange = {(e) => {setQuery(
@@ -53,8 +50,8 @@ export default function Search(){
                         )}
                     }
                 />
-                <button className="search__btn" type="submit">
-                    <AiOutlineSearch className="search-icon"/>
+                <button className="Search__Button" type="submit">
+                    <AiOutlineSearch className="Search__Icon"/>
                 </button>
             </form>
         </section> 

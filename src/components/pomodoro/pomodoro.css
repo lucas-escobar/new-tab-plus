@@ -1,12 +1,7 @@
-section.Pomodoro{
-    display: flex;
+.Pomodoro{
     flex-direction: row;
     align-items: center;
-    width: fit-content;
     gap: 2rem;
-    background-color: var(--color-primary);
-    border-radius: var(--component-radius);
-    padding: var(--box-padding);
 }
 
 .Pomodoro__ModeSelect{

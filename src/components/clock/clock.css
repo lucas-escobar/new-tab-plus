@@ -1,18 +1,13 @@
-section.clock{
-    width: fit-content;
-    padding: var(--box-padding);
-    display: flex;
+.Clock{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: var(--color-primary);
-    border-radius: var(--component-radius);
 }
 
-.time{
+.Clock__Time{
     font-size: 3rem;
 }
 
-.date{
+.Clock__Date{
     font-size: 2.1rem;
 }

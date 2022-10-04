@@ -4,7 +4,7 @@ import './image.css'
 
 export default function Image() {
     return (
-        <section className="image">
+        <section className="Image">
             <img src={imagePath} />
         </section>
     )

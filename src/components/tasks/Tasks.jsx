@@ -13,19 +13,19 @@ export default function Tasks() {
     }
 
     return (
-        <section className="tasks">
-            <ul className="tasks__list">
+        <section className="Tasks">
+            <ul className="Tasks__List">
                 {tasks.map((task, index) => <li key={index}>{task}</li>)}
             </ul>
-            <form className="tasks__form" onSubmit={handleSubmit}>
+            <form className="Tasks__Form" onSubmit={handleSubmit}>
                 <input 
-                    className="tasks__input"
+                    className="Tasks__Input"
                     type="text"
                     placeholder="Enter task"
                     value={input} 
                     onChange={(e) => {setInput(e.target.value)}} 
                 />
-                <button className="tasks__btn" type="submit"><GrFormAdd className="add-icon"/></button>
+                <button className="Tasks__Button" type="submit"><GrFormAdd className="Icon--Add"/></button>
             </form>
         </section>
     );

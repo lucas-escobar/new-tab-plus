@@ -2,6 +2,7 @@ import React, {useState, useEffect, useRef, useMemo} from 'react'
 import {GoBriefcase} from 'react-icons/go'
 import {FaCoffee} from 'react-icons/fa'
 import './pomodoro.css'
+import { SiEightsleep } from 'react-icons/si';
 
 export default function Pomodoro(props) {
     const [isOn, setIsOn] = useState(false);
@@ -14,10 +15,16 @@ export default function Pomodoro(props) {
     const timer = useRef();
 
     function toTimeFormat(seconds){
-        // Converts time in seconds to HH:MM:SS format
+        // Converts time in seconds to MM:SS or HH:MM:SS format
+        var time = '';
         const date = new Date(null);
         date.setSeconds(seconds);
-        return date.toISOString().substring(11, 19);
+        if (seconds > (60 * 60)){ // More than an hour
+            time = date.toISOString().substring(11, 19);
+        } else{
+            time = date.toISOString().substring(14, 19);
+        }
+        return time;
     }
 
     function expiredTimerCheck(seconds) {
@@ -46,7 +53,9 @@ export default function Pomodoro(props) {
     }, [isOn])
 
     useEffect(() => {
-        setSecondsRemaining((isBreak ? workBreakSplit.break : workBreakSplit.work) * 60);
+        setSecondsRemaining(
+            (isBreak ? workBreakSplit.break : workBreakSplit.work) * 60
+        );
     }, [isBreak])
 
     /*useEffect(() => {
@@ -61,18 +70,18 @@ export default function Pomodoro(props) {
                         setIsBreak(false);
                         setIsOn(false);}
                     }
-                    style={{color: !isBreak ? "pink" : "white"}}
+                    style={{color: !isBreak ? "var(--color-secondary)" : "var(--color-on-primary)"}}
                 >
-                    <GoBriefcase/>
+                    <GoBriefcase />
                 </button>
                 <button className="Pomodoro__Icon--Break" 
                     onClick={() => {
                         setIsBreak(true);
                         setIsOn(false);}
                     }
-                    style={{color: isBreak ? "pink" : "white"}}
+                    style={{color: isBreak ? "var(--color-secondary)" : "var(--color-on-primary)"}}
                 >
-                    <FaCoffee/>
+                    <FaCoffee />
                 </button>
             </div>
             <div className="Pomodoro__Time">{toTimeFormat(secondsRemaining)}</div>

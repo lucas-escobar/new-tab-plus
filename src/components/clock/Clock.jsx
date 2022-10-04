@@ -30,9 +30,9 @@ export default function Clock() {
   }, []);
 
   return (
-    <section className='clock'>
-      <div className='time'>{now.hours}:{now.minutes}</div>
-      <div className="date">{now.date}</div>
+    <section className='Clock'>
+      <div className='Clock__Time'>{now.hours}:{now.minutes}</div>
+      <div className="Clock__Date">{now.date}</div>
     </section>
   );
 }

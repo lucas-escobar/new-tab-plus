@@ -1,17 +1,12 @@
-section.search{
-    width: fit-content;
-    padding: var(--box-padding);
-    display: flex;
+.Search{
     gap: 0.8rem;
     justify-content: center;
     align-content: center;
     align-items: center;
     flex-direction: row;
-    background-color: var(--color-primary);
-    border-radius: var(--component-radius);
 }
 
-.search__input{
+.Search__Input{
     padding: 1rem;
     background-color: transparent;
     color: white;
@@ -19,7 +14,7 @@ section.search{
     font-size: 1.5rem;
 }
 
-.search__btn{
+.Search__Button{
     background-color: var(--color-secondary);
     color: black;
     height: 100%;
@@ -27,15 +22,15 @@ section.search{
     border-radius: 0.5rem;
 }
 
-.search-icon{
+.Search__Icon{
     font-size: 1.5rem;
 }
 
-.search__engineLogo{
+.Search__EngineLogo{
     background-color: var(--color-primary);
 }
 
-.search__dropdown{
+.Search__Dropdown{
     padding: 0;
 }
 
@@ -43,7 +38,7 @@ section.search{
     color: red;
 }
 
-.icon{
+.Icon{
     color: white;
     font-size: 3rem;
 }

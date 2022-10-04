@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import Site from './Site.jsx'
 import { FaRedditAlien } from 'react-icons/fa';
-import {BsLinkedin, BsGithub} from 'react-icons/bs'
+import { BsLinkedin, BsGithub } from 'react-icons/bs'
 import './bookmarks.css'
 
 export default function Bookmarks(){
@@ -21,7 +21,7 @@ export default function Bookmarks(){
         ]);
 
     return(
-        <section className="bookmarks">
+        <section className="Bookmarks">
             {sites.map(site => site)}
         </section>
     );

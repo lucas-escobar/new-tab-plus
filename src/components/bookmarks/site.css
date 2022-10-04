@@ -1,8 +1,8 @@
-.bookmark__icon{
+.Site__Icon{
     font-size: 4rem;
     color: white;
 }
 
-.bookmark__icon:hover{
+.Site__Icon:hover{
     color: var(--color-secondary);
 }

@@ -1,8 +1,4 @@
-section.bookmarks{
-    display: flex;
+.Bookmarks{
     flex-direction: row;
-    width: fit-content;
-    background-color: var(--color-primary);
-    border-radius: var(--component-radius);
-    padding: var(--box-padding);
+    gap: 1rem;
 }

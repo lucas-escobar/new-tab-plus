@@ -1,14 +1,9 @@
-section.tasks {
-    width: fit-content;
-    padding: var(--box-padding);
-    display: flex;
+.Tasks {
     flex-direction: column;
     justify-content: left;
-    background-color: var(--color-primary);
-    border-radius: var(--component-radius);
 }
 
-.tasks__list {
+.Tasks__List {
     height: 8rem;
     width: 30rem;
     overflow-y: scroll;
@@ -17,44 +12,44 @@ section.tasks {
     scrollbar-color: white var(--color-bg);
 }
 
-.tasks__list::-webkit-scrollbar{
+.Tasks__List::-webkit-scrollbar{
     background-color: var(--color-bg);
     width: 0.6rem;
     display: none;
 }
 
-.tasks__list:hover::-webkit-scrollbar{
+.Tasks__List:hover::-webkit-scrollbar{
     display: block;
 }
 
-.tasks__list::-webkit-scrollbar-thumb{
+.Tasks__List::-webkit-scrollbar-thumb{
     background-color: var(--color-secondary);
     border-radius: 1rem;
 }
 
-.tasks__input {
+.Tasks__Input {
     list-style-type: circle;
     background-color: var(--color-primary);
 }
 
-.tasks__form {
+.Tasks__Form {
     width: fit-content;
 }
 
-.tasks__input {
+.Tasks__Input {
     padding: 1rem;
     font-family: monospace;
     font-size: 1.4rem;
     color: white;
 }
 
-.tasks__btn {
+.Tasks__Button {
     background-color: var(--color-secondary);
     color: black;
     border-radius: 0.4rem;
     padding: 0.25rem;
 }
 
-.add-icon{
+.Tasks__Icon--Add{
     font-size: 1.5rem;
 }
