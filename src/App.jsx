@@ -11,8 +11,9 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 export default function App(){
   return (
     <>
+    <script src="https://apis.google.com/js/api.js"></script>
     <div className="Row">
-      <Pomodoro workBreak={{work: 25, break: 5}} />
+      <Pomodoro workBreakMins={{work: 25, break: 5}} />
       <Calendar />
     </div>
     <div className="Row">

@@ -4,30 +4,29 @@ import {FaCoffee} from 'react-icons/fa'
 import './pomodoro.css'
 import { SiEightsleep } from 'react-icons/si';
 
-export default function Pomodoro(props) {
+export default function Pomodoro(props){
+    /**
+     * Simple pomodoro timer consisting of start/stop toggle and work/break toggle.
+     */
     const [isOn, setIsOn] = useState(false);
     const [isBreak, setIsBreak] = useState(false);
-    const [workBreakSplit, setWorkBreakSplit] = useState(props.workBreak);
-    const [secondsRemaining, setSecondsRemaining] = useState(props.workBreak.work);
+    const [workBreakSplit, setWorkBreakSplit] = useState(props.workBreakMins);
+    const [secondsRemaining, setSecondsRemaining] = useState(props.workBreakMins.work);
 
     // Audio from https://www.zapsplat.com/?s=gong&post_type=music&sound-effect-category-id
-    const audio = useMemo (() => new Audio('../../assets/gong-1.mp3'), []);
+    const audio = useMemo(() => new Audio('../../assets/gong-1.mp3'), []);
     const timer = useRef();
 
     function toTimeFormat(seconds){
         // Converts time in seconds to MM:SS or HH:MM:SS format
-        var time = '';
         const date = new Date(null);
         date.setSeconds(seconds);
-        if (seconds > (60 * 60)){ // More than an hour
-            time = date.toISOString().substring(11, 19);
-        } else{
-            time = date.toISOString().substring(14, 19);
-        }
-        return time;
+        const isLongerThanHour = seconds > 60*60;
+        return isLongerThanHour ? 
+            date.toISOString().substring(11, 19) : date.toISOString().substring(14,19);
     }
 
-    function expiredTimerCheck(seconds) {
+    function expiredTimerCheck(seconds){
         if (seconds === 0){
             clearInterval(timer.current);
             setIsBreak(!isBreak);

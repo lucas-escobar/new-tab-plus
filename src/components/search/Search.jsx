@@ -23,14 +23,18 @@ export default function Search(){
 
     return(
         <section className="Search">
-            <DropdownButton className="Search__Dropdown"
+            <DropdownButton
+                className="Search__Dropdown"
                 variant="custom"
                 style={{color: '#00B1E1'}}
                 title={engine.icon}
             >
                 {searchEngines.map((engine) => 
-                    <Dropdown.Item className="Search__EngineLogo" key={engine.siteName} 
-                    onClick={handleClick}>
+                    <Dropdown.Item 
+                        className="Search__EngineLogo"
+                        key={engine.siteName} 
+                        onClick={handleClick}
+                    >
                         {engine.icon}
                     </Dropdown.Item>
                 )}
